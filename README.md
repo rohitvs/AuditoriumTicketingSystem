@@ -14,6 +14,7 @@ This Command will compile the code, run the tests and start tomcat server in por
 
 3)	The application exposes a REST API which has 3 methods detailed below.
 
+
 # REST API Details:
 You can use POSTMAN to send the HTTP Requests 
 1)	numSeatsAvailable without level -GET REQUEST-  http://localhost:8080/numSeatsAvailable/
@@ -24,7 +25,7 @@ This will bring back the total number of available seats in the auditorium
 This will bring back the total number of available seats in level 1. If we change the path param to 2, 3 or 4 it will bring back the total number of available seats in the corresponding levels
 
 2)	findAndHoldSeats -POST http://localhost:8080/findAndHoldSeats 
-
+The content type MUST be set to application/json for this to work
 Request body:
 
 {"email":"rohit_vs@yahoo.com","numSeats": "2","minLevel":"1","maxLevel":"3"}

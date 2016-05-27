@@ -5,11 +5,13 @@ More detailed description of the application can be found in README.doc in the r
 # Running the application
 
 Go to the Project Root Directory and run the below command
+
 1)	mvn package && java -jar target/AuditoriumTicketingSystem-0.0.1-SNAPSHOT.jar
 
 This Command will compile the code, run the tests and start tomcat server in port 8080 where the application is deployed. The backend system is In Memory H2 Database.
 
 2)	If you just want to build and run the test then just run mvn clean install
+
 3)	The application exposes a REST API which has 3 methods detailed below.
 
 # REST API Details:

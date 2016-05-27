@@ -1,6 +1,6 @@
 # AuditoriumTicketingSystem
 
-More detailed description of the application can be found in README.doc in the root folder of the project
+More detailed description of the application can be found in README.doc in the root folder of the project.
 
 # Running the application
 
@@ -8,11 +8,13 @@ Go to the Project Root Directory and run the below command
 
 1)	mvn package && java -jar target/AuditoriumTicketingSystem-0.0.1-SNAPSHOT.jar
 
-This Command will compile the code, run the tests and start tomcat server in port 8080 where the application is deployed. The backend system is In Memory H2 Database.
+This Command will compile the code, run the tests and start tomcat server in port 8080 where the application is deployed. The backend system is In Memory H2 Database. 
 
-2)	If you just want to build and run the test then just run mvn clean install
+2)	When the tests run, we will see some exceptions being thrownin the command line. They are expected exceptions which are thrown on certain conditions. 
 
-3)	The application exposes a REST API which has 3 methods detailed below.
+3)	If you just want to build and run the test then just run mvn clean install
+
+4)	The application exposes a REST API which has 3 methods detailed below.
 
 
 # REST API Details:
@@ -46,13 +48,14 @@ Request body:
 
 3)	There are 2 profiles for the data setup(Dev and Test). When the tests run, the test profile is utilized. The Application connects to H2 In Memory Database which has the tables and data that the application will utilize. For the tests, the tables will be pre-loaded with data in all tables.
 
-4)	When the application starts in dev profile, all the tables get created. Only AUDITORIUM_METADATA, SEATS AND PROPERTIES Table will have data. Other tables will be empty. As and when the seats get hold or booked, corresponding tables will get created
+4)	When the application starts in dev profile, all the tables get created. Only AUDITORIUM_METADATA, SEATS AND PROPERTIES Table will have data. Other tables will be empty. As and when the seats get hold or booked, corresponding records tables will get updated. The data for dev profile is in src/main/resources/data-dev.sql
 
-5)	When the tests run, it starts the app server in a random available port and sets up data in H2  in-memory database. All of the test data is available in data-test.sql. 
+5)	When the tests run, it starts the app server in a random available port and sets up data in H2  in-memory database. All of the test data is available in src/main/resources/data-test.sql. 
 
-6)	AuditoriumTicketingSystemApplicationTests class runs the tests for numSeats and Exception scenarios
+6)	AuditoriumTicketingSystemApplicationTests class runs the tests for numSeats REST call and various Exception scenarios
 
 7)	TicketingSystemSimulatorTests runs the tests for Holding and booking. It brings the database up in a particular state. There is just one test method in this class but it does a series of actions like holding, then booking, then hold again. Basically it simulates user behavior and then runs assert statements to make sure the output is as expected.
 
+Please refer to README.docx for more detailed information.
 
 

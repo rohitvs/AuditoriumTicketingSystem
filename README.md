@@ -60,6 +60,10 @@ Request body:
 
 7)	TicketingSystemSimulatorTests runs the tests for Holding and booking. It brings the database up in a particular state. There is just one test method in this class but it does a series of actions like holding, then booking, then hold again. Basically it simulates user behavior and then runs assert statements to make sure the output is as expected.
 
+8)  The DAO layer interacts with custom JPA repositories. The queries that run against the database/tables are in the Custome reository classes in the repositories package.
+
+9) The queries are written in JPQL(java persistence Query language.
+
 Please refer to README.docx for more detailed information.
 
 

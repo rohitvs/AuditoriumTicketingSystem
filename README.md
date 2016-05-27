@@ -16,12 +16,18 @@ This Command will compile the code, run the tests and start tomcat server in por
 You can use POSTMAN to send the HTTP Requests 
 1)	numSeatsAvailable without level -GET REQUEST-  http://localhost:8080/numSeatsAvailable/
 This will bring back the total number of available seats in the auditorium
-1.1	numSeatsAvailable with level  -GET REQUEST- http://localhost:8080/numSeatsAvailable/1/	
+
+1.1	numSeatsAvailable with level  -GET REQUEST- http://localhost:8080/numSeatsAvailable/1/
+
 This will bring back the total number of available seats in level 1. If we change the path param to 2, 3 or 4 it will bring back the total number of available seats in the corresponding levels
+
 2)	findAndHoldSeats -POST http://localhost:8080/findAndHoldSeats 
+
 Request body:
+
 {"email":"rohit_vs@yahoo.com","numSeats": "2","minLevel":"1","maxLevel":"3"}
 	This will hold 2 seats for a user between levels 1 and 3 if its available
+	
 3)	reserveSeats – PUT - http://localhost:8080/reserveSeats/1/rohit_vs@yahoo.com
 
 # Notes

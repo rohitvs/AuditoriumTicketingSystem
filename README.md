@@ -2,6 +2,10 @@
 
 More detailed description of the application can be found in README.doc in the root folder of the project.
 
+# Pre-requisites
+
+Java 1.8
+
 # Running the application
 
 Go to the Project Root Directory and run the below command
